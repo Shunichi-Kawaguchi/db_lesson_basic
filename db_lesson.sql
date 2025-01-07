@@ -45,3 +45,10 @@ VALUES
 (14,'や行で名前を作成しました'),
 (15,'ら行で名前を作成しました'),
 (27,'idをそろえようと思ったら消しすぎて番号が飛びました。後悔');
+
+Q4
+UPDATE people SET department_id = 1 WHERE person_id = 1;
+UPDATE people SET department_id = 2 WHERE person_id = 2;
+UPDATE people SET department_id = 3 WHERE person_id = 3;
+UPDATE people SET department_id = 4 WHERE person_id = 4;
+UPDATE people SET department_id = 5 WHERE person_id = 6;
