@@ -70,3 +70,6 @@ SELECT name FROM people WHERE gender = '1' AND age BETWEEN 40 AND 49;
 
 Q8
 SELECT * FROM people WHERE department_id = 1 AND age;
+
+Q9
+SELECT AVG(age) AS average_age FROM people WHERE gender = 2 AND department_id = 2;
