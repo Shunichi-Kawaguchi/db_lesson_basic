@@ -67,3 +67,6 @@ Q7
 SELECT name FROM people WHERE gender = '2' AND age BETWEEN 20 AND 29
 UNION
 SELECT name FROM people WHERE gender = '1' AND age BETWEEN 40 AND 49;
+
+Q8
+SELECT * FROM people WHERE department_id = 1 AND age;
