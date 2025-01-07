@@ -58,3 +58,12 @@ SELECT name,age,gender
 FROM people
 WHERE gender = 1
 ORDER BY age DESC;
+
+Q6
+peopleテーブルのdepartment_idが1のレコードでカラム名がname,email,ageを取得して
+それをcreated_atの順に並べて結果を表示する
+
+Q7
+SELECT name FROM people WHERE gender = '2' AND age BETWEEN 20 AND 29
+UNION
+SELECT name FROM people WHERE gender = '1' AND age BETWEEN 40 AND 49;
