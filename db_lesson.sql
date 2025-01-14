@@ -47,11 +47,9 @@ VALUES
 (27,'idをそろえようと思ったら消しすぎて番号が飛びました。後悔');
 
 Q4
-UPDATE people SET department_id = 1 WHERE person_id = 1;
-UPDATE people SET department_id = 2 WHERE person_id = 2;
-UPDATE people SET department_id = 3 WHERE person_id = 3;
-UPDATE people SET department_id = 4 WHERE person_id = 4;
-UPDATE people SET department_id = 5 WHERE person_id = 6;
+UPDATE people
+SET department_id = 1
+WHERE person_id IN (1,2,3,4,6);
 
 Q5
 SELECT name,age,gender
@@ -64,12 +62,13 @@ peopleテーブルのdepartment_idが1のレコードでカラム名がname,emai
 それをcreated_atの順に並べて結果を表示する
 
 Q7
-SELECT name FROM people WHERE gender = '2' AND age BETWEEN 20 AND 29
-UNION
-SELECT name FROM people WHERE gender = '1' AND age BETWEEN 40 AND 49;
+SELECT name
+FROM people
+WHERE (gender = '2' AND age BETWEEN 20 AND 29)
+   OR (gender = '1' AND age BETWEEN 40 AND 49);
 
 Q8
-SELECT * FROM people WHERE department_id = 1 AND age;
+SELECT * FROM people WHERE department_id = 1 ORDER BY age ASC;
 
 Q9
 SELECT AVG(age) AS average_age FROM people WHERE gender = 2 AND department_id = 2;
